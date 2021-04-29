@@ -8,5 +8,5 @@ import pl.qubiak.photoHosting.Model.AppUser;
 public interface AppUserRepo extends JpaRepository<AppUser, Long> {
 
     AppUser findByUsername(String username);
-    AppUser checkPassword(String password);
+    //AppUser checkPassword(String password);
 }

@@ -30,7 +30,7 @@ public class ImageUploader {
                        @Value("${cloudNameValue}") String cloudNameValue,
                        @Value("${apiKeyValue}") String apiKeyValue,
                        @Value("${apiSecretValue}") String apiSecretValue) {
-        this.imageRepo=imageRepo;
+        this.imageRepo = imageRepo;
         cloudinary = new Cloudinary(ObjectUtils.asMap(
                 "cloud_name", cloudNameValue,
                 "api_key", apiKeyValue,
@@ -44,7 +44,8 @@ public class ImageUploader {
             uploadResult = cloudinary.uploader().upload(file, ObjectUtils.emptyMap());
             imageRepo.save(new Image(uploadResult.get("url").toString()));
         } catch (IOException e) {
-            // todo
+            e.printStackTrace();
+            System.err.println("Data error. Try again");
         }
         return uploadResult.get("url").toString();
     }

@@ -13,7 +13,7 @@ public class TestApi {
 
     @GetMapping("/test2")
     public String test2() {
-        return "sing-up";
+        return "test2";
     }
 
     @GetMapping("/test3")
