@@ -1,4 +1,4 @@
-package pl.qubiak.photoHosting;
+package pl.qubiak.photoHosting.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -25,6 +25,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         return appUserRepo.findByUsername(s);
     }
+
 
 
 }

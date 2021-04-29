@@ -1,4 +1,4 @@
-package pl.qubiak.photoHosting;
+package pl.qubiak.photoHosting.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ public class TestApi {
 
     @GetMapping("/test2")
     public String test2() {
-        return "test2";
+        return "sing-up";
     }
 
     @GetMapping("/test3")

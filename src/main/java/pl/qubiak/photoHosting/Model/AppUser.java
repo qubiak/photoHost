@@ -17,18 +17,21 @@ public class AppUser implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String username;
     private String password;
     private String role;
+    private String mail;
+    private boolean isEnabled;
 
     public AppUser() {
     }
 
-    public AppUser(String username, String password, String role) {
+    public AppUser(String username, String password, String role, String mail, boolean isEnabled) {
         this.username = username;
         this.password = password;
         this.role = role;
+        this.mail = mail;
+        this.isEnabled = isEnabled;
     }
 
     public Long getId() {
@@ -54,6 +57,19 @@ public class AppUser implements UserDetails {
     public void setRole(String role) {
         this.role = role;
     }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
+    }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -87,6 +103,13 @@ public class AppUser implements UserDetails {
 
     @Override
     public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    public boolean checkPassword(String password) {
+        if (getPassword().equals(password))
         return true;
+        else
+            return false;
     }
 }
