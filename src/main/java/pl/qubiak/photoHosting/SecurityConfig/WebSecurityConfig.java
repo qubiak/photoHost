@@ -1,4 +1,4 @@
-package pl.qubiak.photoHosting;
+package pl.qubiak.photoHosting.SecurityConfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;

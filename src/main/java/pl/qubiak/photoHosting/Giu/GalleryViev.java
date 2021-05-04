@@ -1,7 +1,5 @@
 package pl.qubiak.photoHosting.Giu;
 
-
-import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +17,7 @@ public class GalleryViev extends VerticalLayout {
     public GalleryViev(ImageRepo imageUpader) {
         this.imageUpader = imageUpader;
         List<Image> all = imageUpader.findAll();
-        all.stream().forEach(element -> {
+        all.forEach(element -> {
             com.vaadin.flow.component.html.Image image =
                     new com.vaadin.flow.component.html.Image(element.getImageAdress(), "empty");
             add(image);
