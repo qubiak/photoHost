@@ -5,6 +5,7 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -21,6 +22,8 @@ public class UploadViev extends VerticalLayout {
     public UploadViev(ImageUploader imageUploader) {
         this.imageUploader = imageUploader;
 
+        TextArea textArea = new TextArea("");
+        textArea.setPlaceholder("Enter the address of a picture from your computer picture.jpg");
         Label label = new Label();
         TextField textField = new TextField();
         Button button = new Button("upload");
@@ -34,8 +37,8 @@ public class UploadViev extends VerticalLayout {
 
         });
 
+        add(textArea);
         add(textField);
         add(button);
-
     }
 }

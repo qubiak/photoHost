@@ -54,8 +54,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         AppUser ADMIN = new AppUser("ADMIN", passwordEncoder().encode("ADMIN"), "ADMIN", "ADMIN@ADMIN.pl", true );
         AppUser appUserUser = new AppUser("UserJan", passwordEncoder().encode("UserJan"), "USER", "user@test.pl", true);
         AppUser appUserUser2 = new AppUser("UserMarian", passwordEncoder().encode("UserMarian"), "USER", "user@test.pl", false);
-        AppUser appUserAdmin = new AppUser("AdminJan", passwordEncoder().encode("AdminJan"), "ADMIN", "admin@test.pl", true);
-        AppUser appUserAdmin2 = new AppUser("AdminJan", passwordEncoder().encode("AdminJan"), "ADMIN", "admin@test.pl", false);
+        AppUser appUserAdmin = new AppUser("AdminAngelika", passwordEncoder().encode("AdminAngelika"), "ADMIN", "admin@test.pl", true);
+        AppUser appUserAdmin2 = new AppUser("AdminMariola", passwordEncoder().encode("AdminMariola"), "ADMIN", "admin@test.pl", false);
         appUserRepo.save(ADMIN);
         appUserRepo.save(appUserUser);
         appUserRepo.save(appUserUser2);
