@@ -2,12 +2,16 @@ An application that works like hosting of image files. Upload files to the serve
 Use SpringBoot, Vaadin, cloudinary, 2FA, JPA Repository, remotemysql.
 
     http: // localhost: 8080 / login
+![img_1.png](img_1.png)
+
 Logging in, taking over to registration if the user is not registered.
 
     http: // localhost: 8080 / register
 New user registration
 
     http: // localhost: 8080 / upload
+![img_2.png](img_2.png)
+
 Upload pictures, only for the role: ADMIN
 
     http: // localhost: 8080 / gallery
